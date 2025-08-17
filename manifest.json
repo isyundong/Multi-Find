@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
-  "keywords": ["search", "find", "highlight", "multi-search", "keyword", "productivity", "research", "text-finder"],
   "permissions": [
     "activeTab",
     "storage",
