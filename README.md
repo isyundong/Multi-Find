@@ -1,182 +1,63 @@
-# Multi Find - Chrome多搜索插件
+# Multi Find - Chrome Multi-Search Extension
 
-一个强大的Chrome浏览器插件，解决原生Ctrl+F只能单个搜索的限制，支持在网页中同时搜索多个关键词并用不同颜色高亮显示。
+A powerful Chrome browser extension that solves the limitation of native Ctrl+F single search, supporting simultaneous search of multiple keywords on web pages with different color highlighting.
 
-## ✨ 功能特性
+![Multi Find Screenshot](images/screenshot.png)
 
-- 🔍 **多关键词搜索**: 同时搜索最多8个不同的关键词
-- 🎨 **彩色高亮**: 每个搜索词使用不同颜色高亮显示
-- ⚡ **实时搜索**: 即时显示搜索结果，无需刷新页面
-- 🎯 **精确匹配**: 支持大小写敏感和全词匹配选项
-- ⌨️ **快捷键支持**: Ctrl+Shift+F 快速打开搜索面板
-- 💾 **智能记忆**: 自动保存搜索历史，方便重复使用
-- 🎪 **美观界面**: 现代化的用户界面设计
+## ✨ Features
 
-## 🚀 安装方法
+- 🔍 **Multi-keyword Search**: Search up to 8 different keywords simultaneously
+- 🎨 **Color Highlighting**: Each search term uses different color highlighting
+- ⚡ **Real-time Search**: Instant search results without page refresh
+- 🎯 **Precise Matching**: Support for case-sensitive and whole word matching options
+- ⌨️ **Keyboard Shortcuts**: Ctrl+Shift+F to quickly open search panel
+- 🎪 **Beautiful Interface**: Modern user interface design
+- 🌍 **Multi-language Support**: English, Chinese (Simplified & Traditional), French, German, Russian
 
-### 方法一：开发者模式安装（推荐）
+## 🚀 Installation
 
-1. 打开Chrome浏览器，进入扩展程序管理页面：
-   - 地址栏输入 `chrome://extensions/`
-   - 或者点击右上角三点菜单 → 更多工具 → 扩展程序
+### Method 1: Developer Mode Installation (Recommended)
 
-2. 开启「开发者模式」（页面右上角的开关）
+1. Open Chrome browser and go to the extensions management page:
+   - Enter `chrome://extensions/` in the address bar
+   - Or click the three-dot menu in the top right → More tools → Extensions
 
-3. 点击「加载已解压的扩展程序」
+2. Enable "Developer mode" (toggle in the top right corner)
 
-4. 选择本项目的文件夹
+3. Click "Load unpacked"
 
-5. 插件安装完成！
+4. Select this project folder
 
-### 方法二：打包安装
+5. Extension installed successfully!
 
-1. 在扩展程序页面点击「打包扩展程序」
-2. 选择本项目文件夹，生成.crx文件
-3. 将.crx文件拖拽到扩展程序页面完成安装
+### Method 2: Package Installation
 
-## 📖 使用指南
+1. Click "Pack extension" on the extensions page
+2. Select this project folder to generate a .crx file
+3. Drag the .crx file to the extensions page to complete installation
 
-### 基本使用
+## 📖 User Guide
 
-1. **打开搜索面板**：
-   - 点击浏览器工具栏中的Multi Find图标
-   - 或使用快捷键 `Ctrl+Shift+F`
+### Basic Usage
 
-2. **添加搜索词**：
-   - 在输入框中输入要搜索的关键词
-   - 点击「添加」按钮或按回车键
+1. **Open Search Panel**:
+   - Click the Multi Find icon in the browser toolbar
+   - Or use the keyboard shortcut `Ctrl+Shift+F`
 
-3. **管理搜索词**：
-   - 点击搜索词旁边的「移除」按钮删除单个搜索词
-   - 点击「清空全部」按钮删除所有搜索词
+2. **Add Search Terms**:
+   - Enter keywords to search in the input box
+   - Click the "Add" button or press Enter
 
-4. **启用/禁用搜索**：
-   - 点击「启用搜索」/「禁用搜索」按钮控制高亮显示
+3. **Manage Search Terms**:
+   - Click the "Remove" button next to search terms to delete individual terms
+   - Click "Clear All" button to delete all search terms
 
-### 高级功能
+4. **Enable/Disable Search**:
+   - Click "Enable Search"/"Disable Search" button to control highlighting
 
-- **颜色识别**: 每个搜索词会自动分配不同的高亮颜色
-- **悬停效果**: 鼠标悬停在高亮文本上会有放大效果
-- **智能匹配**: 自动处理特殊字符和正则表达式
+### Advanced Features
 
-## 🛠️ 技术架构
-
-### 文件结构
-```
-Multi Find/
-├── manifest.json          # 插件配置文件
-├── background.js          # 后台脚本
-├── content.js            # 内容脚本（核心搜索逻辑）
-├── content.css           # 内容样式
-├── popup.html            # 弹出页面HTML
-├── popup.js              # 弹出页面逻辑
-├── icons/                # 插件图标
-│   ├── icon16.svg
-│   ├── icon32.svg
-│   ├── icon48.svg
-│   └── icon128.svg
-└── README.md             # 项目说明
-```
-
-### 核心技术
-
-- **Manifest V3**: 使用最新的Chrome扩展API
-- **Content Scripts**: 在网页中注入搜索功能
-- **Message Passing**: 组件间通信机制
-- **Chrome Storage API**: 数据持久化存储
-- **TreeWalker API**: 高效的DOM文本节点遍历
-
-## 🎨 自定义配置
-
-### 修改高亮颜色
-
-在 `content.js` 中修改 `colors` 数组：
-
-```javascript
-this.colors = [
-  '#ffeb3b', // 黄色
-  '#ff9800', // 橙色
-  '#4caf50', // 绿色
-  '#2196f3', // 蓝色
-  '#9c27b0', // 紫色
-  '#f44336', // 红色
-  '#00bcd4', // 青色
-  '#795548'  // 棕色
-];
-```
-
-### 调整最大搜索词数量
-
-在 `popup.js` 中修改限制：
-
-```javascript
-if (this.searches.length >= 8) { // 修改这个数字
-  this.showMessage('最多支持8个搜索关键词', 'warning');
-  return;
-}
-```
-
-## 🔧 开发调试
-
-### 调试内容脚本
-
-1. 打开开发者工具（F12）
-2. 在Console中输入：`window.multiFindManager`
-3. 可以直接调用管理器的方法进行调试
-
-### 调试后台脚本
-
-1. 进入 `chrome://extensions/`
-2. 找到Multi Find插件，点击「检查视图」中的「背景页」
-3. 在Console中输入：`backgroundManager`
-
-### 调试弹出页面
-
-1. 右键点击插件图标
-2. 选择「检查弹出内容」
-3. 在开发者工具中调试
-
-## 🐛 常见问题
-
-### Q: 插件无法在某些网站上工作？
-A: 某些网站（如Chrome商店、内部页面）由于安全策略限制，插件无法注入内容脚本。这是正常现象。
-
-### Q: 搜索结果不准确？
-A: 插件会自动转义特殊字符，如果需要使用正则表达式，请在代码中修改 `escapeRegExp` 方法。
-
-### Q: 高亮颜色冲突？
-A: 可以在 `content.css` 中调整高亮样式的优先级和透明度。
-
-### Q: 性能问题？
-A: 对于内容特别多的页面，可以考虑添加防抖机制或限制搜索范围。
-
-## 🤝 贡献指南
-
-欢迎提交Issue和Pull Request！
-
-1. Fork本项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 🙏 致谢
-
-- 感谢Chrome扩展开发社区的支持
-- 感谢所有测试用户的反馈
-- 图标设计灵感来源于Material Design
-
-## 📞 联系方式
-
-如有问题或建议，请通过以下方式联系：
-
-- 提交GitHub Issue
-- 发送邮件至开发者
-
----
-
-**Multi Find** - 让网页搜索更高效！ 🚀
+- **Color Recognition**: Each search term is automatically assigned different highlight colors
+- **Hover Effects**: Hovering over highlighted text shows magnification effects
+- **Smart Matching**: Automatically handles special characters and regular expressions
+- **Navigation**: Use ◀ and ▶ buttons to navigate between matches for each keyword
