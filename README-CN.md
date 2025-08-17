@@ -1,4 +1,5 @@
 # Multi Find - Chrome多搜索插件
+[English instructions](https://github.com/isyundong/Multi-Find/blob/main/README.md) | [中文说明](https://github.com/isyundong/Multi-Find/blob/main/README-CN.md)
 
 一个强大的Chrome浏览器插件，解决原生Ctrl+F只能单个搜索的限制，支持在网页中同时搜索多个关键词并用不同颜色高亮显示。
 
