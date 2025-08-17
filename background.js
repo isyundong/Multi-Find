@@ -214,15 +214,15 @@ class BackgroundManager {
     // 创建通知
     const notificationOptions = {
       type: 'basic',
-      iconUrl: 'icons/icon48.png',
+      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
       title: title,
       message: message
     };
-
+  
     try {
       chrome.notifications.create('', notificationOptions, (notificationId) => {
         if (chrome.runtime.lastError) {
-          console.error('Notification error:', chrome.runtime.lastError);
+          console.error('Notification error:', chrome.runtime.lastError.message || chrome.runtime.lastError);
         } else {
           console.log('Notification created:', notificationId);
           

@@ -1,18 +1,166 @@
 /* Multi Find Chrome Extension - Content Styles */
 /* 多搜索功能的样式定义 */
 
+/* 基础高亮样式 */
 .multi-find-highlight {
-  background-color: #ffeb3b !important;
-  padding: 1px 2px !important;
-  border-radius: 2px !important;
-  font-weight: bold !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+  padding: 2px 4px !important;
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.2s ease !important;
+  border: 1px solid transparent !important;
 }
 
 .multi-find-highlight:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 表单元素高亮样式 */
+.multi-find-form-highlight {
+  background: linear-gradient(45deg, rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0.5)) !important;
+  border: 2px solid #ffd700 !important;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.7) !important;
+}
+
+/* title属性高亮样式 */
+.multi-find-title-highlight {
+  outline: 2px solid #ff6b6b !important;
+  outline-offset: 2px !important;
+  background: rgba(255, 107, 107, 0.1) !important;
+}
+
+/* 当前匹配项的特殊高亮样式 */
+.multi-find-current-match {
+  animation: multi-find-pulse 1.5s ease-in-out infinite !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4) !important;
+  border: 2px solid #ff0000 !important;
+  z-index: 9999 !important;
+  position: relative !important;
+  transform: scale(1.1) !important;
+  transition: all 0.3s ease !important;
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+@keyframes multi-find-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6);
+  }
+}
+
+/* 匹配项提示框 */
+.multi-find-tooltip {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 12px 20px !important;
+  border-radius: 25px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  z-index: 10001 !important;
+  animation: multi-find-tooltip-slide 0.4s ease-out !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.multi-find-tooltip::before {
+  content: "🎯" !important;
+  margin-right: 8px !important;
+  font-size: 16px !important;
+}
+
+@keyframes multi-find-tooltip-slide {
+  0% {
+    opacity: 0 !important;
+    transform: translateX(-50%) translateY(-20px) !important;
+  }
+  100% {
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+}
+
+@keyframes multi-find-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+  }
+}
+
+/* 多色高亮样式 - 现代化配色 */
+.multi-find-highlight-0 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #fbbf24 !important;
+}
+
+.multi-find-highlight-1 {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+  border-color: #60a5fa !important;
+}
+
+.multi-find-highlight-2 {
+  background-color: #dcfce7 !important;
+  color: #166534 !important;
+  border-color: #4ade80 !important;
+}
+
+.multi-find-highlight-3 {
+  background-color: #fce7f3 !important;
+  color: #be185d !important;
+  border-color: #f472b6 !important;
+}
+
+.multi-find-highlight-4 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+  border-color: #818cf8 !important;
+}
+
+.multi-find-highlight-5 {
+  background-color: #fed7d7 !important;
+  color: #c53030 !important;
+  border-color: #fc8181 !important;
+}
+
+.multi-find-highlight-6 {
+  background-color: #e6fffa !important;
+  color: #234e52 !important;
+  border-color: #4fd1c7 !important;
+}
+
+.multi-find-highlight-7 {
+  background-color: #faf5ff !important;
+  color: #553c9a !important;
+  border-color: #a78bfa !important;
+}
+
+.multi-find-highlight-8 {
+  background-color: #fff7ed !important;
+  color: #9a3412 !important;
+  border-color: #fb923c !important;
+}
+
+.multi-find-highlight-9 {
+  background-color: #f0fdf4 !important;
+  color: #14532d !important;
+  border-color: #22c55e !important;
 }
 
 /* 多搜索面板样式 */
