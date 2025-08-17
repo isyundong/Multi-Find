@@ -1,0 +1,18 @@
+{
+  "extName": {
+    "message": "Multi Find - Multi-Keyword-Sucherweiterung",
+    "description": "Erweiterungsname"
+  },
+  "extDescription": {
+    "message": "Leistungsstarke Multi-Keyword-Sucherweiterung mit farbiger Hervorhebung. Perfekt für Forschung und Produktivität.",
+    "description": "Erweiterungsbeschreibung"
+  },
+  "toggleCommand": {
+    "message": "Multi Find Suchpanel umschalten",
+    "description": "Befehlsbeschreibung für Tastenkürzel"
+  },
+  "actionTitle": {
+    "message": "Multi Find - Multi-Keyword-Suche",
+    "description": "Aktionsschaltflächen-Titel"
+  }
+}

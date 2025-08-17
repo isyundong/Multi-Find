@@ -1,0 +1,18 @@
+{
+  "extName": {
+    "message": "Multi Find - Extension de Recherche Multi-Mots-Clés",
+    "description": "Nom de l'extension"
+  },
+  "extDescription": {
+    "message": "Extension puissante de recherche multi-mots-clés avec surlignage coloré. Parfait pour la recherche et la productivité.",
+    "description": "Description de l'extension"
+  },
+  "toggleCommand": {
+    "message": "Basculer le panneau de recherche Multi Find",
+    "description": "Description de la commande de raccourci"
+  },
+  "actionTitle": {
+    "message": "Multi Find - Recherche Multi-Mots-Clés",
+    "description": "Titre du bouton d'action"
+  }
+}

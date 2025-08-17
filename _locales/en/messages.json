@@ -1,0 +1,18 @@
+{
+  "extName": {
+    "message": "Multi Find - Multi-Keyword Search Extension",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Powerful multi-keyword search extension with color highlighting. Perfect for research, development, and productivity.",
+    "description": "Extension description"
+  },
+  "toggleCommand": {
+    "message": "Toggle Multi Find search panel",
+    "description": "Command description for toggle shortcut"
+  },
+  "actionTitle": {
+    "message": "Multi Find - Search Multiple Keywords",
+    "description": "Action button title"
+  }
+}

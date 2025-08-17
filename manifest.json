@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Multi Find",
+  "name": "__MSG_extName__",
   "version": "1.0.0",
-  "description": "Chrome插件，支持在网页中进行多个关键词同时搜索，解决原生Ctrl+F只能单个搜索的限制",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "keywords": ["search", "find", "highlight", "multi-search", "keyword", "productivity", "research", "text-finder"],
   "permissions": [
     "activeTab",
     "storage",
@@ -17,8 +19,9 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Multi Find",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
+      "16": "icons/icon48.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
@@ -27,6 +30,7 @@
     "service_worker": "background.js"
   },
   "icons": {
+    "16": "icons/icon48.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
@@ -44,7 +48,9 @@
       "suggested_key": {
         "default": "Ctrl+Shift+F"
       },
-      "description": "打开/关闭多搜索功能"
+      "description": "__MSG_toggleCommand__"
     }
-  }
+  },
+  "homepage_url": "https://github.com/isyundong/multi-find",
+  "author": "isyundong"
 }

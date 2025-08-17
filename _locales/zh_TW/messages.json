@@ -1,0 +1,18 @@
+{
+  "extName": {
+    "message": "Multi Find - 多關鍵字搜索擴展",
+    "description": "擴展名稱"
+  },
+  "extDescription": {
+    "message": "強大的多關鍵字搜索擴展，支持彩色高亮顯示。完美適用於研究、開發和提升工作效率。",
+    "description": "擴展描述"
+  },
+  "toggleCommand": {
+    "message": "打開/關閉多搜索面板",
+    "description": "切換快捷鍵的命令描述"
+  },
+  "actionTitle": {
+    "message": "Multi Find - 多關鍵字搜索",
+    "description": "操作按鈕標題"
+  }
+}
