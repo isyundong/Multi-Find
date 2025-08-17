@@ -1,6 +1,6 @@
 # Multi Find - Chrome Multi-Search Extension
 
-![English instructions](https://github.com/isyundong/Multi-Find/edit/main/README.md) ![中文说明](https://github.com/isyundong/Multi-Find/blob/main/README-CN.md) 
+[English instructions](https://github.com/isyundong/Multi-Find/blob/main/README.md) | [中文说明](https://github.com/isyundong/Multi-Find/blob/main/README-CN.md)
 
 A powerful Chrome browser extension that solves the limitation of native Ctrl+F single search, supporting simultaneous search of multiple keywords on web pages with different color highlighting.
 
